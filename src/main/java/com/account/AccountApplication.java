@@ -14,10 +14,10 @@ import io.swagger.v3.oas.annotations.info.Info;
 @EnableJpaRepositories(basePackages = {"com.demo"})
 @EntityScan(basePackages = {"com.demo.entity","com.demo.model"})
 @OpenAPIDefinition(info = @Info(title ="Account/Login MS",version = "1.0.0",description = "Account/Login for performing account/login related queries"  ))
-public class DemoApplication{
+public class AccountApplication{
 
 		public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(AccountApplication.class, args);
 	}
 
 }
