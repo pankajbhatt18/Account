@@ -1,3 +1,6 @@
+/*@Header
+ *@Author:Pankaj 
+ */
 package com.account;
 import java.io.IOException;
 import javax.servlet.FilterChain;
@@ -11,11 +14,27 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.account.service.AuthenticationService;
 
+/**
+ * The Class RestAuthenticationFilter.
+ */
 public class RestAuthenticationFilter implements javax.servlet.Filter {
+	
+	/** The Constant AUTHENTICATION_HEADER. */
 	public static final String AUTHENTICATION_HEADER = "Authorization";
 
+	/** The authentication service. */
 	@Autowired
 	private AuthenticationService authenticationService;
+	
+	/**
+	 * Do filter.
+	 *
+	 * @param request the request
+	 * @param response the response
+	 * @param filter the filter
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 * @throws ServletException the servlet exception
+	 */
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response,
 			FilterChain filter) throws IOException, ServletException {
@@ -35,9 +54,20 @@ public class RestAuthenticationFilter implements javax.servlet.Filter {
 			}
 		}
 	}
+	
+	/**
+	 * Destroy.
+	 */
 	@Override
 	public void destroy() {
 	}
+	
+	/**
+	 * Inits the.
+	 *
+	 * @param arg0 the arg 0
+	 * @throws ServletException the servlet exception
+	 */
 	@Override
 	public void init(FilterConfig arg0) throws ServletException {
 	}
