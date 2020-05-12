@@ -30,8 +30,4 @@ public class AccountApplication extends SpringBootServletInitializer {
 		SpringApplication.run(AccountApplication.class, args);
 	}
 
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(AccountApplication.class);
-	}
 }
