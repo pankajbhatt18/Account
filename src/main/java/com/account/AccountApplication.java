@@ -1,5 +1,4 @@
 package com.account;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -19,8 +18,7 @@ import io.swagger.v3.oas.annotations.info.Info;
 @EnableJpaRepositories(basePackages = { "com.demo" })
 @EntityScan(basePackages = { "com.demo.entity", "com.demo.model" })
 @OpenAPIDefinition(info = @Info(title = "Account/Login MS", version = "1.0.0", description = "Account/Login for performing account/login related queries"))
-public class AccountApplication extends SpringBootServletInitializer {
-
+public class AccountApplication {
 	/**
 	 * The main method.
 	 *
@@ -29,5 +27,4 @@ public class AccountApplication extends SpringBootServletInitializer {
 	public static void main(String[] args) {
 		SpringApplication.run(AccountApplication.class, args);
 	}
-
 }
